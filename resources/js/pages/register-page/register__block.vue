@@ -1,22 +1,22 @@
 <template>
-    <div :class="cnLogin('block')">
+    <div :class="cnRegister('block')">
         <Welcome />
         <Auth />
-        <LinkToAny forgotPassword="/forgot_password" register="/register"></LinkToAny>
-        <AuthButton invite="">Login</AuthButton>
+        <LinkToAny login="/"></LinkToAny>
+        <AuthButton invite="">Sign in</AuthButton>
     </div>
 </template>
 
 <script setup>
-import { cnLogin } from "./login.const"
+import { cnRegister } from './register.const';
 import Welcome from "@/assets/shared/components/welcome/welcome.vue"
-import Auth from "./login__auth.vue"
-import LinkToAny from "./login__link.vue"
+import Auth from "./register__auth.vue"
+import LinkToAny from "./register__link.vue"
 import AuthButton from "@/assets/shared/components/button/button.vue"
 </script>
 
 <style lang="scss" scoped>
-.login__block {
+.register__block {
     display: flex;
     align-items: center;
     flex-direction: column;

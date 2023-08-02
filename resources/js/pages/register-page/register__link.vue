@@ -1,22 +1,20 @@
 <template>
-    <div :class="cnLogin('link')">
-        <Link :class="cnLogin('link-item')" :href="forgotPassword">Forgot your password?</Link>
-        <Link :class="cnLogin('link-item')" :href="register" style="text-align: right;">Join us?</Link>
+    <div :class="cnRegister('link')">
+        <Link :class="cnRegister('link-item')" :href="login" style="text-align: right;">Have account?</Link>
     </div>
 </template>
 
 <script setup>
-import { cnLogin } from "./login.const";
 import { Link } from '@inertiajs/vue3'
+import { cnRegister } from "./register.const";
 
 const props = defineProps({
-    forgotPassword: Array,
-    register: Array,
+    login: Array,
 })
 </script>
 
 <style lang="scss" scoped>
-.login__link {
+.register__link {
     display: flex;
     width: 25.5625rem;
     height: 3.125rem;

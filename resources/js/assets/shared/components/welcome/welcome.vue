@@ -1,15 +1,15 @@
 <template>
-    <div :class="cnLogin('welcome')">Welcome to
-        <span :class="cnLogin('welcome_bold')">x.com!</span>
+    <div :class="cnWelcome('')">Welcome to
+        <span :class="cnWelcome('bold')">x.com!</span>
     </div>
 </template>
 
 <script setup>
-import { cnLogin } from "./login.const";
+import { cnWelcome } from './welcome.const';
 </script>
 
 <style lang="scss" scoped>
-.login__welcome {
+.welcome {
     color: #D9D9D9;
     text-align: center;
     font-family: Inter;
@@ -28,7 +28,7 @@ import { cnLogin } from "./login.const";
         font-size: 2.5vw;
     }
 
-    &_bold {
+    &__bold {
         color: #D9D9D9;
         font-family: Inter;
         font-size: 2vw;

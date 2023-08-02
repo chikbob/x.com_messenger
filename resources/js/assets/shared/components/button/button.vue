@@ -1,13 +1,18 @@
 <template>
-    <div :class="cnButton('block')">
+    <Link :class="cnButton('block')" :href="invite">
         <div :class="cnButton('block-text')">
             <slot></slot>
         </div>
-    </div>
+    </Link>
 </template>
 
 <script setup>
 import { cnButton } from './button.const';
+import { Link } from '@inertiajs/vue3'
+
+const props = defineProps({
+    invite: Array,
+})
 </script>
 
 <style lang="scss" scoped>
@@ -19,6 +24,7 @@ import { cnButton } from './button.const';
         flex-direction: column;
         justify-content: center;
         flex-shrink: 0;
+        text-decoration: none;
 
         border-radius: 1.25rem;
         background: #D9D9D9;
