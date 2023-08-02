@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', fn()=>Inertia::render('login-page/login'));
 
 Route::get('/register', fn()=>Inertia::render('register-page/register'));
+
+Route::get('/forgot_password', fn()=>Inertia::render('forgot_password-page/forgot_password'));

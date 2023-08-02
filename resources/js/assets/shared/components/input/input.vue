@@ -4,13 +4,19 @@
             <slot></slot>
         </div>
         <InputField id=1 />
-        <InputField id=2 />
+        <InputField id=2 v-if="props.delete == 0" />
     </div>
 </template>
 
 <script setup>
 import { cnInput } from "./input.const.js";
 import InputField from './input__field.vue';
+
+const props = defineProps({
+    delete: Boolean,
+})
+
+props.delete == 0;
 </script>
 
 <style lang="scss" scoped>
@@ -24,5 +30,9 @@ import InputField from './input__field.vue';
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.none {
+    display: none;
 }
 </style>
