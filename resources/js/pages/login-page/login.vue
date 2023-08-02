@@ -7,7 +7,7 @@
 
 <script setup>
 import { cnLogin } from "./login.const";
-import LoginLogo from "./login__logo.vue"
+import LoginLogo from "@/assets/shared/components/logo/logo.vue"
 import Block from "./login__block.vue"
 </script>
 

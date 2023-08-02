@@ -1,15 +1,15 @@
 <template>
-    <div :class="cnLogin('logo')">
+    <div :class="cnLogo()">
         <img src="@/assets/images/white_logo.png" alt="white_logo.png">
     </div>
 </template>
 
 <script setup>
-import { cnLogin } from "./login.const";
+import { cnLogo } from "./logo.const"
 </script>
 
 <style lang="scss" scoped>
-.login__logo {
+.logo {
     display: flex;
     justify-content: center;
     margin: 3rem 0;
