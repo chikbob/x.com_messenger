@@ -1,20 +1,20 @@
 <template>
-    <div :class="cnForgotPassword('block')">
+    <div :class="cnCode('block')">
         <Welcome />
         <Auth />
-        <AuthButton invite="/code">Next</AuthButton>
+        <AuthButton invite="/">Next</AuthButton>
     </div>
 </template>
 
 <script setup>
-import { cnForgotPassword } from './forgot_password.const';
+import { cnCode } from './code.const';
 import Welcome from "@/assets/shared/components/welcome/welcome.vue"
-import Auth from "./forgot_password__auth.vue"
+import Auth from "./code__auth.vue"
 import AuthButton from "@/assets/shared/components/button/button.vue"
 </script>
 
 <style lang="scss" scoped>
-.forgot-password__block {
+.code__block {
     display: flex;
     align-items: center;
     flex-direction: column;

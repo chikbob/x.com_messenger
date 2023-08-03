@@ -18,6 +18,10 @@ if (props.id == 2) {
     text = "Password"
     type = "password"
 }
+
+if (props.id == 3) {
+    text = "Code"
+}
 </script>
 
 <style lang="scss" scoped>

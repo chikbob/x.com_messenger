@@ -1,6 +1,6 @@
 <template>
     <div :class="cnRegister('auth')">
-        <Input :class="cnRegister('auth-block')">Register</Input>
+        <Input deleteCode=1 :class="cnRegister('auth-block')">Register</Input>
     </div>
 </template>
 

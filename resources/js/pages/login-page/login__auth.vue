@@ -1,6 +1,6 @@
 <template>
     <div :class="cnLogin('auth')">
-        <Input :class="cnLogin('auth-block')">Sign in</Input>
+        <Input deleteCode=1 :class="cnLogin('auth-block')">Sign in</Input>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div :class="cnForgotPassword('auth')">
-        <Input delete=1 :class="cnForgotPassword('auth-block')">Forgot your password</Input>
+        <Input deletePassword=1 deleteCode=1 :class="cnForgotPassword('auth-block')">Forgot your password</Input>
     </div>
 </template>
 
