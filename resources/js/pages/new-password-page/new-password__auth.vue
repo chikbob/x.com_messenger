@@ -1,16 +1,16 @@
 <template>
-    <div :class="cnForgotPassword('auth')">
-        <Input deletePassword=1 deleteCode=1 :class="cnForgotPassword('auth-block')">Forgot your password</Input>
+    <div :class="cnNewPassword('auth')">
+        <Input spawnNewPassword=1 spawnNewPasswordAgain=1 :class="cnNewPassword('auth-block')"></Input>
     </div>
 </template>
 
 <script setup>
-import { cnForgotPassword } from './forgot_password.const';
+import { cnNewPassword } from './new-password.const';
 import Input from "@/assets/shared/components/input/input.vue";
 </script>
 
 <style lang="scss" scoped>
-.forgot-password__auth {
+.new-password__auth {
     display: flex;
     align-items: center;
 

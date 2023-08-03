@@ -1,6 +1,6 @@
 <template>
     <div :class="cnInput('field')">
-        <input :placeholder="text" :type="type" :class="cnInput('field-input')">
+        <input :placeholder="text" :type="type" @keypress="NumbersOnly()" minlength="8" :class="cnInput('field-input')">
     </div>
 </template>
 
@@ -10,18 +10,40 @@ import { cnInput } from './input.const';
 let text = "Email address"
 let type = null
 
+function NumbersOnly(evt) {
+    if (props.id == 'code') {
+        evt = (evt) ? evt : window.event;
+        let charCode = (evt.which) ? evt.which : evt.keyCode;
+        if ((charCode > 31 && (charCode < 48 || charCode > 57)) && charCode !== 46) {
+            evt.preventDefault();;
+        } else {
+            return true;
+        }
+    }
+}
+
 const props = defineProps({
-    id: Number,
+    id: Array,
 })
 
-if (props.id == 2) {
+if (props.id == 'password' || props.id == 'newPassword' || props.id == 'newPasswordAgain') {
     text = "Password"
     type = "password"
 }
 
-if (props.id == 3) {
+if (props.id == 'newPassword') {
+    text = "New password"
+}
+
+if (props.id == 'newPasswordAgain') {
+    text = "New password again"
+}
+
+if (props.id == 'code') {
     text = "Code"
 }
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -58,5 +80,16 @@ input {
             margin-bottom: 1.25rem;
         }
     }
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
 }
 </style>

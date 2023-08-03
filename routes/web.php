@@ -18,6 +18,8 @@ Route::get('/', fn()=>Inertia::render('login-page/login'));
 
 Route::get('/register', fn()=>Inertia::render('register-page/register'));
 
-Route::get('/forgot_password', fn()=>Inertia::render('forgot_password-page/forgot_password'));
+Route::get('/forgot_password', fn()=>Inertia::render('forgot-password-page/forgot-password'));
 
 Route::get('/code', fn()=>Inertia::render('code-page/code'));
+
+Route::get('/new_password', fn()=>Inertia::render('new-password-page/new-password'));

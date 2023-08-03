@@ -7,9 +7,9 @@
 </template>
 
 <script setup>
-import { cnForgotPassword } from './forgot_password.const';
+import { cnForgotPassword } from './forgot-password.const';
 import Welcome from "@/assets/shared/components/welcome/welcome.vue"
-import Auth from "./forgot_password__auth.vue"
+import Auth from "./forgot-password__auth.vue"
 import AuthButton from "@/assets/shared/components/button/button.vue"
 </script>
 

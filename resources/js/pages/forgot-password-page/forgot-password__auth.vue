@@ -1,16 +1,16 @@
 <template>
-    <div :class="cnCode('auth')">
-        <Input smallText=1 spawnCode=1 :class="cnCode('auth-block')">Check your email and enter the code from the email</Input>
+    <div :class="cnForgotPassword('auth')">
+        <Input spawnEmail=1 :class="cnForgotPassword('auth-block')">Forgot your password</Input>
     </div>
 </template>
 
 <script setup>
-import { cnCode } from './code.const';
+import { cnForgotPassword } from './forgot-password.const';
 import Input from "@/assets/shared/components/input/input.vue";
 </script>
 
 <style lang="scss" scoped>
-.code__auth {
+.forgot-password__auth {
     display: flex;
     align-items: center;
 
